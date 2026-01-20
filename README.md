@@ -92,7 +92,8 @@ The following SQL queries were developed to answer specific business questions:
     ```
 
 3. **Write a SQL query to calculate the total sales (total_sale) for each category.**:
- ``` select `category`,sum(`total_sale`) as total_sale,
+ ``` sql
+    select `category`,sum(`total_sale`) as total_sale,
     count(*) as total_order
     from nandhu.retail_dataset
     where `category` in ('clothing','electronics','beauty') 
@@ -102,13 +103,14 @@ The following SQL queries were developed to answer specific business questions:
 ```
 
 4. **Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category.**:
-``` select `category` , round(avg(`age`),2) as age from nandhu.retail_dataset
+``` sql
+ select `category` , round(avg(`age`),2) as age from nandhu.retail_dataset
 where `category` in ('beauty');
    
 ```
 
 5. **Write a SQL query to find all transactions where the total_sale is greater than 1000.**:
-```
+```sql
 select *  from nandhu.retail_dataset
 where `total_sale` >'1000';
 ```
